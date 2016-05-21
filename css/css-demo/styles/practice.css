@@ -2,6 +2,10 @@ section#contact-info {
   font-size: .8em;
 }
 
+section#contact-info p:hover {
+  background-color: grey;
+}
+
 section.job {
   background-color: #e9e5dc;
   border-bottom-right-radius: 25px;
