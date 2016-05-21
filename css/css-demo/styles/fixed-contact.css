@@ -9,6 +9,10 @@ section#contact-info {
   padding: 20px;
 }
 
+section#contact-info p:hover {
+  background-color: grey;
+}
+
 h1#resume-title {
   margin-top: 70px;
 }

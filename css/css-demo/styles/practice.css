@@ -1,0 +1,14 @@
+section#contact-info {
+  font-size: .8em;
+}
+
+section.job {
+  background-color: #e9e5dc;
+  border-bottom-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  padding-bottom: 3px;
+}
+
+section.quals {
+  font-size: .8em;
+}
