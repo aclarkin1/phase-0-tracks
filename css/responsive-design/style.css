@@ -1,3 +1,11 @@
+body {
+  max-width: 960px;
+}
+
+main {
+  width: 80%;
+}
+
 blockquote {
   border-left: 5px solid blue;
   padding: 15px;
@@ -7,6 +15,13 @@ blockquote {
 cite {
   display: block;
   margin-top: 10px;
+}
+
+section#external-links {
+  width: 20%;
+  float: right;
+  display: inline-block;
+  vertical-align: top;
 }
 
 #external-links ul {
@@ -30,3 +45,41 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+
+
+@media screen and (max-width: 500px) {
+  main {
+    font-size: 80%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  h1 {
+    font-size 60%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  section#external-links {
+    font-size: 80%;
+  }
+
+@media screen and (max-width: 40px) {
+  main {
+    width: 92%;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  section#external-links {
+    width: 8%;
+  }
+}
+
+/* Saving as a comment - this command will make the screen hot pink if reduced to a width of 500px or less - 
+/* @media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+  }
+}
+/*
