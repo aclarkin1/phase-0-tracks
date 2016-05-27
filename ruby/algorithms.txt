@@ -1,0 +1,40 @@
+- Stand in front of elevator.
+- Wait for elevator doors to open.
+- Once the elevator doors have opened, enter the elevator through open doors.
+- Rotate 180 degrees so that you are now facing the elevator doors.
+- Notice the control pad located to the left of the elevator doors.
+- Press the button on the control pad containing the floor number you wish to travel to.
+- Notice the electronic screen directly above the control pad.
+- When the electronic screen displays the floor number you selected AND the elevator doors open, step completely outside of the elevator.
+
+Make a sandwich
+- Place wood chopping block on counter, directly below cupboard.
+- Open cutlery drawer.
+- Remove butter knife from cutlery drawer.
+- Place butter knife on wood chopping block.
+- Stand in front of cupboard.
+- Remove loaf of bread from cupboard.
+- Place loaf of bread on wood chopping block.
+- Remove jar of peanut butter from cupboard.
+- Place jar of peanut butter on wood chopping block.
+- Remove jar of jam from cupboard.
+- Place jar of jam on wood wood chopping block.
+- Remove twist tie from plastic bag containing loaf of bread.
+- Remove two slices of bread from plastic bag.
+- Place two slices of bread on wood chopping block.
+- Remove lid from jar of peanut butter.
+- Place peanut butter jar lid on counter, directly next to wood chopping block.
+- Remove lid from jar of jam.
+- Place jam jar lid on counter, directly next to wood chopping block.
+- Insert butter knife into peanut butter jar.
+- Move butter knife in circular pattern in order to grab peanut butter on the butter knife.
+- Remove butter knife from peanut butter jar.
+- Spread peanut butter on the two slices of bread on the wood chopping block with the butter knife.
+- Insert butter knife into jam jar.
+- Move butter knife in circular pattern in order to grab jam on the butter knife.
+- Remove butter knife from jam jar.
+- Spread jam on the two slices of bread on the wood chopping block with the butter knife.
+- Place the butter knife down on the wood chopping block.
+- Pick up one slice of bread with your hand, such that the side with the peanut butter and jam is facing you.
+- Rotate the slice of bread 180 degrees so that the side with the peanut butter and jam is facing down.
+- Place the slice of bread directly on top of the slice of bread on the wood chopping block.
