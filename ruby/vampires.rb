@@ -1,9 +1,19 @@
+puts "How many employees do you have?"
+  workforce = gets.to_i
+
+i = 0
+sum = 0
+
+until sum == workforce do
+  i = i + 1
+  sum = sum + 1
+
 puts "What is your name"
   name = gets.chomp
 puts "How old are you?"
   age = gets.to_i
 puts "What year were you born?"
-  dob = gets.to_i
+  birthday = gets.to_i
 puts "Our company serves garlic bread. Should we order some for you?"
   bread = gets.chomp
 puts "Would you like to enroll in the company's health insurance?"
@@ -20,4 +30,6 @@ when insurance == "No" || bread == "No"
   puts 'Probably a Vampire.'
 else
   puts 'More information needed.'
+end
+
 end
