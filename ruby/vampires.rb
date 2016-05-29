@@ -19,7 +19,16 @@ puts "Our company serves garlic bread. Should we order some for you?"
 puts "Would you like to enroll in the company's health insurance?"
   insurance = gets.chomp
 
+puts "Please tell us about any allergies you have. One at a time - type 'done' when complete."
+  allergy = gets.chomp
+
+until allergy == "Sunshine" || allergy == "Done" do
+  allergy = gets.chomp
+end
+
 case
+when allergy == "Sunshine"
+  puts "Probably a Vampire"
 when (name == "Drake Cula" || name == "Tu Fang")
   puts "Definitely a Vampire"
 when insurance == "Yes" && bread == "Yes"
@@ -31,5 +40,4 @@ when insurance == "No" || bread == "No"
 else
   puts 'More information needed.'
 end
-
 end
