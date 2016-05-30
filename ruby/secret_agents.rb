@@ -80,7 +80,7 @@ password = gets.chomp.downcase
 # If encrypt, run encrypter
 # If decrypt, run decrypter
   if response == "encrypt"
-    p encrypter(password)
+    p encrypt(password)
   else
     puts decrypt(password)
   end
