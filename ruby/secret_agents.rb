@@ -58,10 +58,30 @@ end
 return encrypted_password
 end
 
-#puts encrypt("canada")
-#puts decrypt("dbobeb")
+#Test code samples to validate encrypt and decrypt methods
+#puts encrypt("abc")
+#puts encrypt("zed")
+#puts decrypt("bcd")
+#puts decrypt("afe")
 
-puts encrypt("abc")
-puts encrypt("zed")
-puts decrypt("bcd")
-puts decrypt("afe")
+
+# puts decrypter(encrypter("swordfish")) <-- test code -->
+#when decrypter(encrypter("swordfish")) is called, 'swordfish' is printed as if nothing happened to it and that is the way it should appear when nest the encrypter method in the decrypter method. You are encrypting 'swordfish' FIRST and then decrypting the encrypted 'swordfish' thereafter.
+
+
+# Ask user whether they want to decrypt or encrypt password
+puts "Do you want to encrypt or decrypt a password?"
+response = gets.chomp.downcase
+
+# Ask user for password
+puts "Enter your password"
+password = gets.chomp.downcase
+
+# If encrypt, run encrypter
+# If decrypt, run decrypter
+  if response == "encrypt"
+    p encrypter(password)
+  else
+    puts decrypt(password)
+  end
+# Run chosen task and print password
