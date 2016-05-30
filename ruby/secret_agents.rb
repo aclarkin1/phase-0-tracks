@@ -7,17 +7,26 @@
 #- Combine the proceeding characters
 #- Print the combined proceeding characters
 
-puts "Please enter your password"
-  password = gets.chomp.downcase
+#puts "Please enter your password"
+#  password = gets.chomp.downcase
 
+def encrypt(password)
 index = 0
-
 while index < password.length
-  password[index] = password[index].next
+  str = "zabcdefghijklmnopqrstuvwxyza"
+  current_letter = password[index]
+  # For password "hello", expect first current2_letter to be "h"
+  # Find the index of the current letter in the string. Store in variable current_letter_position.
+  # Advance the current letter position by 1. Store in variable encrypted_letter_position.
+  # Find the letter that corresponds to encrypted_letter_position. Store in variable encrypted_letter_position.
+  current_letter_position = str.index(current_letter)
+  encrypted_letter_position = current_letter_position+1
+  encrypted_letter = str[encrypted_letter_position]
+  password[index] = encrypted_letter
   index +=1
 end
-
-puts password
+return password
+end
 
 ##Decrypt
 # Identify the password produced by the encryption tool
@@ -28,12 +37,12 @@ puts password
 # For each individual character in the password, identify the immediately preceeding character alphabetically
 # Print the combined preceeding characters
 
-puts "Enter the encrypted password"
-  encrypted_password = gets.chomp.downcase
-
+#puts "Enter the encrypted password"
+#  encrypted_password = gets.chomp.downcase
+def decrypt(encrypted_password)
 index = 0
 while index < encrypted_password.length
-  str = "abcdefghijklmnopqrstuvwxyz"
+  str = "zabcdefghijklmnopqrstuvwxyza"
   current_letter = encrypted_password[index]
   #For password of "hello", expect first current_letter to be "h"
   #Find the index of current letter in string. And store in variable current_letter_position
@@ -46,5 +55,13 @@ while index < encrypted_password.length
   encrypted_password[index] = decrypted_letter
   index +=1
 end
+return encrypted_password
+end
 
-puts encrypted_password
+#puts encrypt("canada")
+#puts decrypt("dbobeb")
+
+puts encrypt("abc")
+puts encrypt("zed")
+puts decrypt("bcd")
+puts decrypt("afe")
