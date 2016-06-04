@@ -41,6 +41,8 @@ end
 
 p build_array(1, "two", nil)
 
+# At the top of your file, add a method that takes an array and an item as parameters, and returns the array with the item added. 
+
 def add_to_array(arr, value)
   arr.push(value)
 end
