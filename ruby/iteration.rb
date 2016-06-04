@@ -18,17 +18,23 @@ jersey_number.map do |players, shirt|
 end
 
 jersey_number = {"Emre Can" => 6, "Luis Suarez" => 7, "Steven Gerrard" => 8, "Fernando Torres" => 9}
+fav_numbers = [4, 7, 21, 33, 87]
 
 # A method that iterates through the items, deleting any that meet a certain condition (for example, deleting any numbers that are less than 5).
 jersey_number.delete_if{|player, shirt| shirt >= 8 }
 
+fav_numbers.delete_if{|a| a >= 8}
+
 # A method that filters a data structure for only items that do satisfy a certain condition (for example, keeping any numbers that are less than 5).
 jersey_number.keep_if{|player, shirt| shirt >=8 }
+fav_numbers.keep_if[|a| >=8]
 
 # A different method that filters a data structure for only items satisfying a certain condition
 
 jersey_number.select{|player, shirt| player.include?("Steven")}
+fav_numbers.select{|a| a < 30}
 
 # A method that will remove items from a data structure until the condition in the block evaluates to false, then stops.
 
 jersey_number.reject{|player, shirt| shirt < 8}
+fav_numbers.reject{|a| a > 30}
