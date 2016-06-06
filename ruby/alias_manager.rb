@@ -55,11 +55,9 @@
 #end
 #end
 
-def name_tool
-  quit = false
-  until quit == true do
-  puts "Please enter your name"
-  name = gets.chomp
+results = {}
+
+def name_tool(name)
   full_name = name.split
   reverse_name = full_name.reverse
   first_name = reverse_name.at(0)
@@ -72,31 +70,27 @@ def name_tool
   new_last = last_array.join
   new_name = [new_first, new_last]
   new_name_string = new_name * " "
-  both_names = {name => new_name_string}
-#  puts both_names[:new_name_string]
-  puts "Press enter to repeat. Type 'Quit' to exit."
-    response = gets.chomp
-      if response = ["Quit", "quit"].include?(response)
-        quit = true
-      else
-        quit = false
-      end
-  end
-#name_array = []
-#name_array << all_names = both_names.each_value{|value| puts value}
-#puts all_names
-##puts both_names[:new_name_string]
-#both_names.each do |name1, name2|
-#  puts "#{name1} is actually #{name2}"
-puts both_names
-#both_names.each_value do puts "Surprise! #{both_names.fetch(:new_name_string)} is actually #{both_names.fetch(:name)}"
-both_names.each do puts "Surprise! #{new_name_string} is actually #{name}"
-end
-##puts both_names["new_name_string"]
-##return both_names
-##both_names.map do |name, new_name_string|
-##puts "Surprise! #{new_name_string} is actually #{name}"
-#end
 end
 
-name_tool
+
+
+puts "Please enter your name"
+  name = gets.chomp.to_s
+  p name_tool(name)
+  results[name] = name_tool(name)
+  quit = false
+  until quit == true do
+      puts "Press enter to repeat. Type 'Quit' to exit."
+          response = gets.chomp
+            if response = ["Quit", "quit"].include?(response)
+              quit = true
+            else
+              quit = false
+              puts "Please enter your name"
+              name = gets.chomp.to_s
+              p name_tool(name)
+              results[name] = name_tool(name)
+            end
+  end
+
+p results
