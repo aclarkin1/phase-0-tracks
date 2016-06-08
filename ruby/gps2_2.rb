@@ -22,5 +22,12 @@ def grocery_list_org(items, quantity)
   grocery_list_hash = Hash[grocery_list]
 end
 
-p grocery_list_org("carrots apples cereal pizza", "2,3,1,2")
-grocery_list_hash
+#p grocery_list_org("carrots apples cereal pizza", "2,3,1,2")
+
+def add_item(item, quantity)
+  grocery_list_hash = grocery_list_org("carrots apples cereal pizza", "2,3,1,2")
+  h = {item => quantity}
+  add_item_to_grocery_list_hash = grocery_list_hash.merge(h)
+end
+
+p add_item("cake", 5)
