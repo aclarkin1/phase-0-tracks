@@ -53,13 +53,14 @@ class Santa
   
 end
 
-santa = Santa.new("agender", "black")
-puts "This Santa is #{santa.age} years old. His ethnicity is #{santa.ethnicity}. Santa's gender is #{santa.gender}"
-santa.gender = "Male"
-santa.age = 7
-santa.ethnicity = "Jewish"
-santa.celebrate_birthday
-puts "This Santa is #{santa.age} years old. His ethnicity is #{santa.ethnicity}. Santa's gender is #{santa.gender}"
+## Call class methods
+#santa = Santa.new("agender", "black")
+#puts "This Santa is #{santa.age} years old. His ethnicity is #{santa.ethnicity}. Santa's gender is #{santa.gender}"
+#santa.gender = "Male"
+#santa.age = 7
+#santa.ethnicity = "Jewish"
+#santa.celebrate_birthday
+#puts "This Santa is #{santa.age} years old. His ethnicity is #{santa.ethnicity}. Santa's gender is #{santa.gender}"
 
 
 ##Commenting out interation
@@ -69,3 +70,25 @@ puts "This Santa is #{santa.age} years old. His ethnicity is #{santa.ethnicity}.
 #example_genders.length.times do |i|
 #  santas << Santa.new(example_genders[i], example_ethnicities[i])
 #end
+
+##Algorithm to build many, many santas
+# Initiate a loop to 50 set index to 0
+# Set an array containing example genders
+# Set an array containing example ethnicities
+# Set array containing numbers 1-140.
+# Use .sample to select a random gender, ethnicity and age from arrays. Update instance variables.
+# Print reader code to verify that code works
+
+example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+example_ethnicities = ["black", "Latino", "white","Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+age_range=*(0..141)
+
+index = 0
+until index == 50
+  santa = Santa.new("agender", "black")
+  santa.gender = example_genders.sample
+  santa.ethnicity = example_ethnicities.sample
+  santa.age = age_range.sample
+  puts "This Santa's gender is #{santa.gender} and has an ethnicity of #{santa.ethnicity}. Santa is #{santa.age} years old."
+  index += 1
+end
