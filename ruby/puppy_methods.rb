@@ -55,20 +55,30 @@ class Run
 end
 
 
-# Initiate a loop. Set distance equal to 5. Repeat loop until distance equals 10.
-# Iniate an empty array. Store distances in array.
-# Iterate over array. For each instance (i.e distance), call .jog and .sprint
+# Initiate a loop. Set distance index equal to 0. Repeat loop until index equals 49.
+# Initiate an array with an integer of 5. Title array distances.
+# Iniate an empty array. Title array as runs. Store distances in runs array.
+# Each time loop repeats, increase the last value in distances by 1. Store as variable new_distance.
+# Increase until new_distance equals 15. When new_distance = 15, make new_distance equal to 5.
+# Store new_distance in distances arrray.
+# Iterate over array. For each instance (i.e distance), call .jog method
+# Push each iteration into runs array
 
-#distance = 5
-#runs = []
-#until distance == 11
-#  Run.new.sprint
-#  distance +=1
-#  runs.push(distance)
-#end
 
-distances = [5, 6, 7, 8, 9, 10, 5, 6, 7, 8, 9, 10, 5, 6, 7, 8, 9, 10, 5, 6, 7, 8, 9, 10, 5, 6, 7, 8, 9, 10, 5, 6, 7, 8, 9, 10, 5, 6, 7, 8, 9, 10, 5, 6, 7, 8, 9, 10, 5, 6, 7, 8, 9, 10, 5, 6, 7, 8, 9, 10,]
+distances = [5]
 runs = []
+
+index = 0
+until index == 49
+  new_distance = distances[-1] += 1
+    if new_distance >= 15
+      new_distance = 4
+    else
+      new_distance
+    end
+  distances << new_distance
+  index +=1
+end
 
 distances.each do |distance|
   runs << Run.new(distance)
@@ -78,3 +88,5 @@ end
 runs.each do |run|
   run.jog
 end
+
+p runs
