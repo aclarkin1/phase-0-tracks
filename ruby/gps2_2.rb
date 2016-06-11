@@ -30,10 +30,5 @@ p grocery_list_org("carrots apples cereal pizza", "2,3,1,2")
 #  add_item_to_grocery_list_hash = grocery_list_hash.merge(h)
 #end
 
-grocery_add = ["cake", "5"]
-
-grocery_add.each do |grocery_list_org|
-  grocery_list_hash(items, quanity)
-end
-
-p grocery_add
+def add_item(item, quantity)
+  grocery_list_hash
