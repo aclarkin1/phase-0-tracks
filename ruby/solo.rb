@@ -44,13 +44,14 @@ done = false
 until done == true
   puts "How heavy would you like your racquet to be (in ounces)?"
     racquet.weight = gets.to_i
-    racquet_array << racquet.weight
+  #  racquet_array << racquet.weight
   puts "What string pattern would you like your racquet to have? We offer 16 x 18, 16 x 19, and 18 x 20."
     racquet.string_pattern = gets.chomp.to_s
-    racquet_array << racquet.string_pattern
+   # racquet_array << racquet.string_pattern
   puts "What feel would you like your racquet to have? You may choose soft, firm, or crisp"
     racquet.feel = gets.chomp.to_s
-    racquet_array << racquet.feel
+  #  racquet_array << racquet.feel
+  racquet_array << racquet
   puts "Press any key to order another racquet. Type 'Done' to exit."
     response = gets.chomp
       if response == "Done"
@@ -58,6 +59,6 @@ until done == true
       else
         done = false
       end
-p racquet_array
 end
 
+p racquet_array
