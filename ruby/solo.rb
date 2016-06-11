@@ -35,16 +35,13 @@ end
 
 #Establish user interface to ask user for each variable
 #Establish an empty array titled racquet_array
-#Establish an empty hash titled racuqet_instance
-#Push each instance variable to hash
-#Push each hash to array
+#Push each instance variable to array
 #Initiate a loop to repeat questions until user types "Done"
 
 racquet_array = []
 racquet = Racquet.new(11.2, "18 x 20", "soft")
 done = false
 until done == true
-  racquet_instance = {}
   puts "How heavy would you like your racquet to be (in ounces)?"
     racquet.weight = gets.to_i
     racquet_array << racquet.weight
@@ -61,6 +58,6 @@ until done == true
       else
         done = false
       end
+p racquet_array
 end
 
-p racquet_array
