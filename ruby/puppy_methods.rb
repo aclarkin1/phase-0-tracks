@@ -31,28 +31,50 @@ class Puppy
   end
 end
 
-Puppy.new.fetch("ball")
-Puppy.new.speak(5)
-Puppy.new.roll_over
-Puppy.new.dog_years(5)
-Puppy.new.fav_treat("Chookah", "peanut butter pretzles")
-Puppy.new.initialize
+#Puppy.new.fetch("ball")
+#Puppy.new.speak(5)
+#Puppy.new.roll_over
+#Puppy.new.dog_years(5)
+#Puppy.new.fav_treat("Chookah", "peanut butter pretzles")
+#Puppy.new.initialize
 
 class Run
   
-  def initialize
-    @runner = "Aaron"
+  def initialize(distance)
+    @distance = distance
   end
   
-  def sprint(distance_in_meters)
-    puts "#{@runner} can sprint #{distance_in_meters} meters in his sleep!"
+  def sprint
+    puts "#I can sprint #{@distance} meters in my sleep!"
   end
   
-  def jog(distance_in_miles)
-    puts "It's one of those easy #{distance_in_miles} mile jog kind of days..."
+  def jog
+    puts "It's one of those easy #{@distance} mile jog kind of days..."
   end
-  
+
 end
 
-Run.new.sprint(200)
-Run.new.jog(5)
+
+# Initiate a loop. Set distance equal to 5. Repeat loop until distance equals 10.
+# Iniate an empty array. Store distances in array.
+# Iterate over array. For each instance (i.e distance), call .jog and .sprint
+
+#distance = 5
+#runs = []
+#until distance == 11
+#  Run.new.sprint
+#  distance +=1
+#  runs.push(distance)
+#end
+
+distances = [5, 6, 7, 8, 9, 10, 5, 6, 7, 8, 9, 10, 5, 6, 7, 8, 9, 10, 5, 6, 7, 8, 9, 10, 5, 6, 7, 8, 9, 10, 5, 6, 7, 8, 9, 10, 5, 6, 7, 8, 9, 10, 5, 6, 7, 8, 9, 10, 5, 6, 7, 8, 9, 10, 5, 6, 7, 8, 9, 10,]
+runs = []
+
+distances.each do |distance|
+  runs << Run.new(distance)
+  puts "Runner has gone for #{runs.length} runs!"
+end
+
+runs.each do |run|
+  run.jog
+end
