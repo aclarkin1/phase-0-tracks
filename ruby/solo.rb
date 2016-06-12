@@ -15,15 +15,15 @@ class Racquet
     @@racquet_array = []
   end
   
-  def weight
+  def ounces
     puts "The racquet has a weight of #{@weight} ounces"
   end
   
-  def string_pattern
-    puts "The #{@string_pattern} provides a good mix of spin and control."
+  def strings
+    puts "The #{@string_pattern} string pattern provides a good mix of spin and control."
   end
   
-  def feel
+  def touch
     puts "The racquet has a #{@feel} feel."
   end
   
@@ -55,15 +55,14 @@ done = false
 until done == true
   puts "How heavy would you like your racquet to be (in ounces)?"
     racquet.weight = gets.to_i
-  #  racquet_array << racquet.weight
+    racquet.ounces
   puts "What string pattern would you like your racquet to have? We offer 16 x 18, 16 x 19, or 18 x 20."
     racquet.string_pattern = gets.chomp.to_s
-   # racquet_array << racquet.string_pattern
+    racquet.strings
   puts "What feel would you like your racquet to have? You may choose soft, firm, or crisp"
     racquet.feel = gets.chomp.to_s
+    racquet.touch
   racquet.collect
-  #  racquet_array << racquet.feel
-  #@@racquet_array << racquet
   puts "Press any key to order another racquet. Type 'Done' to exit."
     response = gets.chomp
       if response == "Done"
@@ -74,4 +73,3 @@ until done == true
       end
 end
 
-#p racquet_array
