@@ -51,14 +51,14 @@ until done == true
   puts "What feel would you like your racquet to have? You may choose soft, firm, or crisp"
     racquet.feel = gets.chomp.to_s
   #  racquet_array << racquet.feel
-  racquet_array << racquet
   puts "Press any key to order another racquet. Type 'Done' to exit."
     response = gets.chomp
       if response == "Done"
         done = true
       else
-        done = false
+        done = false  
       end
+    racquet_array << racquet
 end
 
 p racquet_array
