@@ -18,5 +18,10 @@ for (var i = 4; i >= 0; i--) {
 
 var reverse = array.join(' ');
 
+// Driver code to test method
 //console.log(array)
-console.log(reverse)
+//console.log(reverse)
+
+if (1 == 1) {
+	console.log(reverse)
+}
