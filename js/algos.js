@@ -1,12 +1,11 @@
+//Release 0
+
 // Objective: Write a function that takes an array of words or phrases and returns the longest word or phrase in the array.
 // Establish 2 arrays: phrases, and longest_phrase. longest_phrase should be blank
 // For each item in the phrases array, determine the item's length
 // Initiate a loop to print the length of each item in the array
 // If the length of the item evaluated is longer than the item in longest_phrase, push the item into longest_phrase
   // And pull the existing item out of longest phrase
-
-
-
 
 var phrases = ["Andy", "Andy Bloody Murray", "Andrew Murray", "Andy Reginald George Murray",  "Andy Murray"];
 var longest_phrase = ["a"];
@@ -19,6 +18,8 @@ for (var i = 0; i < phrases.length; i++) {
     }
 }
 console.log(longest_phrase);
+
+//Release 1
 
 // Objective evaluate two key-value pairs and determine if any of the values match
 // Write a function that takes two arguments. Each argument will be a key-value pair
@@ -56,7 +57,31 @@ for (var i = 0; i < value1.length; i++){
     }
   }
 }  
-  
 }
 
-find_match({name: "Aaron", age: 28}, {name: "Sam", age: 31});
+//Driver code to call method
+//find_match({name: "Aaron", age: 28}, {name: "Sam", age: 31});
+
+// Release 2
+// Initiate a function randword that takes an integer as an argument
+// Within the function, initiate a blank string as a variable (string)
+// Initiate a string of characters to draw from as a variable (chars)
+// Initiate an empty array as a variable
+// Initiate a loop within the variable - while i is less than the integer passed as an argument, generate a string of random characters from the "chars" variable
+// Push each generated word into the blank array
+// Return the array
+
+function rand(times){
+    var string = "";
+    var chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    var array = [];
+    for (i = 0; i < times; i++){
+    while(string.length < times && times > 0 ){
+        string += chars[Math.floor(Math.random() * chars.length)];
+    }
+    array.push(string);
+    }
+    return array;
+}
+
+rand(5);
