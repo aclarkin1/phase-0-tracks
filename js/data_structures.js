@@ -24,7 +24,10 @@ console.log(horse_obj)
 //  horses[i] = colors[i];
 //}
 
-//Write a constructor function
+//Write a constructor function for a car
+// Initiate a variable (car) that is a set of key-value pairs
+// Write a function that takes the key-value pairs as arguments
+// Write an instance function that prints "vrooom" for each instance of the function
 
 var car = {make: 'Toyota', 'capacity': 5, fitsHorse: false};
 
