@@ -1,18 +1,18 @@
-//var horses = ["Ed", "Nora", "Martha", "Tom"]
-//var colors = ["black", "blue", "red", "silver"]
+var horses = ["Ed", "Nora", "Martha", "Tom"]
+var colors = ["black", "blue", "red", "silver"]
 
-//horses.push("Ted")
-//colors.push("green")
+horses.push("Ted")
+colors.push("green")
 
-//console.log(colors)
-//console.log(horses)
+console.log(colors)
+console.log(horses)
 
-//horse_obj.name = "Ed";
-
-//console.log(horse_obj)
-
-//horse_obj.name = horses[0]
-//horse_obj.color = colors[0]
+//Write a function to create key-value pairs of horses and colors.
+	// horses = keys, colors = values
+// In function, create empty object called horseObj
+// Include horses and colors array in function
+// Loop over array, for index i, push corresponding horse and color into object
+// Return object
 
 var matchHorses = function() {
 var horseObj = {};
@@ -20,12 +20,12 @@ var horses = ["Ed", "Nora", "Martha", "Tom"];
 var colors = ["black", "blue", "red", "silver"];
 
 for(i=0; i < horses.length; i++){
-horseObj[horses[0]] = colors[0];
+horseObj[horses[i]] = colors[i];
 
-	return horseObj;
+//	return horseObj;
 }
+return horseObj;
 }
-
 
 console.log(matchHorses())
 
