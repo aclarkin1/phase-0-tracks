@@ -10,14 +10,18 @@
 var phrases = ["Andy", "Andy Bloody Murray", "Andrew Murray", "Andy Reginald George Murray",  "Andy Murray"];
 var longest_phrase = ["a"];
 
-
-for (var i = 0; i < phrases.length; i++) {
-    if (phrases[i].length > longest_phrase[0].length) {
-		longest_phrase.push(phrases[i]);
+var find_longest = function(inputPhrases){
+for (var i = 0; i < inputPhrases.length; i++) {
+    if (inputPhrases[i].length > longest_phrase[0].length) {
+		longest_phrase.push(inputPhrases[i]);
     	longest_phrase.splice(0,1);
     }
 }
+return(longest_phrase);
+}
+
 console.log(longest_phrase);
+console.log(find_longest(rand(5)));
 
 //Release 1
 
@@ -76,11 +80,13 @@ function rand(times){
     var chars = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     var array = [];
     for (i = 0; i < times; i++){
+    string = "";
     while(string.length < times && times > 0 ){
         string += chars[Math.floor(Math.random() * chars.length)];
     }
     array.push(string);
     }
+    console.log(array);
     return array;
 }
 
