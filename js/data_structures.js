@@ -1,28 +1,34 @@
-var horses = ["Ed", "Nora", "Martha", "Tom"]
-var colors = ["black", "blue", "red", "silver"]
+//var horses = ["Ed", "Nora", "Martha", "Tom"]
+//var colors = ["black", "blue", "red", "silver"]
 
-horses.push("Ted")
-colors.push("green")
+//horses.push("Ted")
+//colors.push("green")
 
 //console.log(colors)
 //console.log(horses)
-
-var horse_obj = {}
 
 //horse_obj.name = "Ed";
 
 //console.log(horse_obj)
 
-console.log(horses[0])
+//horse_obj.name = horses[0]
+//horse_obj.color = colors[0]
 
-horse_obj.name = horses[0]
-horse_obj.color = colors[0]
+var matchHorses = function() {
+var horseObj = {};
+var horses = ["Ed", "Nora", "Martha", "Tom"];
+var colors = ["black", "blue", "red", "silver"];
 
-console.log(horse_obj)
+for(i=0; i < horses.length; i++){
+horseObj[horses[0]] = colors[0];
 
-//for(i=0; i < horses.length; i++){
-//  horses[i] = colors[i];
-//}
+	return horseObj;
+}
+}
+
+
+console.log(matchHorses())
+
 
 //Write a constructor function for a car
 // Initiate a variable (car) that is a set of key-value pairs
